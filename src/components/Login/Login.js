@@ -20,10 +20,12 @@ function Login() {
     function handleOnChange(e) {
         setFormValues({ ...formValues, [e.target.name]:e.target.value})
     }
-    
+
     useEffect(()=> {
     const JWT = localStorage.getItem("jwt")
     setJwt(JWT);
+
+    console.log(getJwt)
 
     }, [])
 
@@ -57,6 +59,7 @@ function Login() {
 
             setError('Your username or password is incorrect, are you a member? If not please Register')
         })
+        console.log(error)
     }
 
 

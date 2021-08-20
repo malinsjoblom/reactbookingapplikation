@@ -17,8 +17,10 @@ function API () {
             catch(err) {
                 console.log(err)
             }
+
         }
         fetchData()
+        console.log(data)
     }, [])
 
 return (

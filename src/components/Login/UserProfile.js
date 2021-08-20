@@ -29,7 +29,6 @@ function UserProfile() {
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [updateFormValues, setUpdateFormValues] = useState(modalInitialValues);
-
     const userId = localStorage.getItem("userId")
     const username = localStorage.getItem("username")
     const email = localStorage.getItem("email")
@@ -78,19 +77,15 @@ function UserProfile() {
 
     function onHandleSubmit(e) {
         e.preventDefault();
-
         axios.get('http://localhost:1337/users', {
             username: updateFormValues.username,
             email: updateFormValues.description,
             role: updateFormValues.role
         }).then((res) => {
             console.log(res.data)
-
             const data = new FormData( );
             data.append("ref", "user")
-
             data.append("refId", res.data.id)
-
         }). catch((err) => {
             console.log(err)
         })
