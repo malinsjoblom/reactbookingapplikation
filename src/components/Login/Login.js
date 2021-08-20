@@ -27,7 +27,7 @@ function Login() {
 
     console.log(getJwt)
 
-    }, [])
+    }, [getJwt])
 
 
     function handleOnSubmit(e) {
