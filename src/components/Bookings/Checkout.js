@@ -16,7 +16,7 @@ function MyBooking() {
 
         const fetchData = async () => {
             const res = await axios.get
-                (`http://localhost:1337/user-bookings?users_permissions_permission.id=${userId}`
+                (`https://strapi2022.herokuapp.com/user-bookings?users_permissions_permission.id=${userId}`
                     , {
                         headers: {
                             Authorization: `Bearer ${token}`,

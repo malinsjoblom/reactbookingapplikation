@@ -6,7 +6,7 @@ function ForgotPassword() {
 
     function resetRequest() {
         axios
-            .post('http://localhost:1337/auth/forgot-password', {
+            .post('https://strapi2022.herokuapp.com/auth/forgot-password', {
                 email: 'malin.sjoblom@medieinstitutet.se', // user's email
             })
             .then(response => {
@@ -31,7 +31,7 @@ function ForgotPassword() {
         e.preventDefault();
 
         axios
-        .post('http://localhost:1337/auth/local', {
+        .post('https://strapi2022.herokuapp.com/auth/local', {
             identifier: formValues.email,
         })
         .then(response => {

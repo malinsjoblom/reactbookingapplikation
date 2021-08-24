@@ -19,7 +19,7 @@ function UploadFile() {
         data.append("files", fileData)
 
    
-        const res = axios.post('http://localhost:1337/upload', data)
+        const res = axios.post('https://strapi2022.herokuapp.com/upload', data)
         console.log(res)
     }
 

@@ -26,7 +26,7 @@ function AddToProduct() {
         e.preventDefault();
   
 
-    axios.post('http://localhost:1337/products', {
+    axios.post('https://strapi2022.herokuapp.com/products', {
         name: formValues.name,
         description: formValues.description,
         price: formValues.price
@@ -41,7 +41,7 @@ function AddToProduct() {
 
         data.append("field", "image") 
 
-        axios.post("http://localhost:1337/upload", data)
+        axios.post("https://strapi2022.herokuapp.com/upload", data)
             .then((image) => console.log(image))
             .catch((error) => console.log(error))
 

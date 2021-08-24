@@ -15,7 +15,7 @@ function Checkout({ name, price, time, appointment, mobile }) {
         const stripe = await stripePromise;
 
         // Call your backend to create the Checkout Session
-        const response = await axios.post('http://localhost:4242/create-checkout-session', {name:name, price:price});
+        const response = await axios.post('https://strapi2022.herokuapp.com/create-checkout-session', {name:name, price:price});
 
         const session = response.data.id;
 

@@ -53,7 +53,7 @@ function UserProfile() {
 
     function deleteProfile() {
         try {
-            const deleteUser = axios.delete(`http://localhost:1337/users/${userId}`,
+            const deleteUser = axios.delete(`https://nail-bar.herokuapp.com/users/${userId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ function UserProfile() {
     }
     function onHandleSubmit(e) {
         e.preventDefault();
-        axios.get('http://localhost:1337/users', {
+        axios.get('https://nail-bar.herokuapp.com/users', {
             username: updateFormValues.username,
             email: updateFormValues.description,
             role: updateFormValues.role
