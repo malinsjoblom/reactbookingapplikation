@@ -13,7 +13,7 @@ function ProductList() {
         //console.log("from useEffect" , loadPage)
 
         const fetchProducts= async()=>{
-            const response =     await axios.get(`https://strapi2022.herokuapp.com/products?_limit=${loadPage}`)
+        const response = await axios.get(`https://strapi2022.herokuapp.com/products?_limit=${loadPage}`)
 
             console.log(response)
             setProducts(response.data) 

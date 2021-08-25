@@ -92,7 +92,8 @@ function Product({ productName, price, description, image, appointment }) {
         <>
             <div className=" flex justify-start grid justify-items-center p-8">
                 <div className="w-1/2 bg-cover border-4 border-purple-200 rounded border-opacity-75">
-                    <img src={`https://strapi2022.herokuapp.com${image.formats.medium.url}`} alt=" nail designs from database " /> </div>
+                <img src={`https://strapi2022.herokuapp.com${image.url}`} alt=" nail designs from database " />
+                    </div> 
                 <div className="pr0"> - {productName} - </div>
                 <div className="pr1"> - {description} - </div>
                 <div className="pr2B max-h-10 flex rounded-lg space-x-3">
