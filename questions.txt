@@ -1,0 +1,33 @@
+Man ska kunna beskriva        
+
+Vad är en CMS?
+En CMS är Content Management System, ett system för att publicera olika former av information. 
+Spara och hantera innehåll till en webbplats. T.ex. Drupal, WordPress och EpiServer. 
+Ett sätt att styra och göra enkla ändringar i ditt system utan att behöva koda. 
+Det kan vara både en Rubrik på din hemsida eller färg på ett kontaktformulär.
+
+Headless CMS?
+Ett headless CMS sköter istället bara innehållshanteringen och du sköter det via ett API. 
+Headless gör innehållet plattformsoberoende. Alltså att det är lättare att kombinera olika innehåll och ta in andra system. 
+Detta gör att du lättare kan anpassa och skapa mer egna, unika projekt och styra ditt innehåll. 
+
+
+Firebase/serverless/backend as a service?
+Med BaaS kan du få hjälp med t.ex. databas, cloud storage, user authentication. 
+Allt som behövs för att en webb eller mobil applikation ska fungera. 
+Detta kan en BaaS lösa. Så slipper man koda och skapa dom alla helt själv. Detta för att spara tid. 
+
+
+Skillnaden mellan cms och backend as a service?
+Med ett CMS system så sparar, hanterar och publicerar man olika former av innehåll till en webbplats.
+Med en BaaS så får du en färdig typ ”backend modell” för att din app ska fungera I t.ex. Wordpress
+ så kan vem som helst använda sig av koden kostnadsfritt då det är öppen källkod. 
+ Du behöver inte veta så mycket om programmering helt enkelt. Det är till för alla oavsett utvecklare eller ej. 
+
+
+Vilket sammanhang ska man använda headless cms och vanlig cms? 
+När man använder sig av Javascriptverk t.ex. Angular, Vue eller React är det bäst att använda sig av headless CMS.
+Även när du ska publicera något på flera plattformar. 
+
+Om du bygger en hemsida till dig själv eller för ett litet företag. Kan det vara bättre att använda CMS.
+Då du har lättare att styra över allt som händer själv och det går ganska snabbt att sätta upp. 
