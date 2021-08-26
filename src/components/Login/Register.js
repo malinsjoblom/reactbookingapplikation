@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import server from "../config"
 
 
 function Register() {
@@ -22,7 +23,7 @@ function Register() {
     function handleOnSubmit(e) {
         e.preventDefault();
 
-        axios.post('https://nail-bar.herokuapp.com/auth/local/register', {
+        axios.post(`${server}auth/local/register`, {
             username: registerValues.username,
             email: registerValues.email,
             password: registerValues.password,
@@ -34,7 +35,7 @@ function Register() {
 
     return (
         <>
-            {loggedIn ? (<div> The user {username} was created, now you can <Link to='/login'> login </Link> </div>)
+            {loggedIn ? (<div> <h2> The user {username} was created, now you can <Link to='/login'> <strong> login </strong> </Link> </h2> </div>)
                 : (<div
                     className="font-semibold text-xl container max-w-full mx-auto md:py-24 px-6 bg-purple-100">
                     <div
@@ -61,10 +62,14 @@ function Register() {
                                                     USERNAME
                                                     </span>
                                                 <input
-                                                    placeholder="" type="text" name="username" value={registerValues.username} onChange={handleOnChange}
+                                                    placeholder=""
+                                                    type="text"
+                                                    name="username" 
+                                                    value={registerValues.username} onChange={handleOnChange}
                                                     className="text-md block px-3 py-2 rounded-lg w-full
-                bg-white border-2 border-gray-300 
-                placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"/>
+                                                              bg-white border-2 border-gray-300
+                                                              placeholder-gray-600 shadow-md focus:placeholder-gray-500 
+                                                              focus:bg-white focus:border-gray-600 focus:outline-none"/>
                                             </div>
                                             <div
                                                 className="py-1">
@@ -133,6 +138,7 @@ function Register() {
                                             <button
                                                 className=
                                                 "mt-3 text-lg font-semibold bg-gray-800 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-black">
+                                                
                                                 REGISTER
                             </button>
                                         </div>

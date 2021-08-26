@@ -1,6 +1,7 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
+import server from "../config"; 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_51Ix6NwEgvU6BV5dzng6Dv0aXEXyM0sjQaxnqdQXOtyuCGul4G3koxyjkkvXkL5KI60iMuxBLOKq8OVoWeX8GoLey00CusHYteK');
@@ -15,7 +16,7 @@ function Checkout({ name, price, time, appointment, mobile }) {
         const stripe = await stripePromise;
 
         // Call your backend to create the Checkout Session
-        const response = await axios.post('https://strapi2022.herokuapp.com/create-checkout-session', {name:name, price:price});
+        const response = await axios.post(`${server}create-checkout-session`, {name:name, price:price});
 
         const session = response.data.id;
 

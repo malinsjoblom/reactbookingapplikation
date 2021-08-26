@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import server from "../config";
 
 function AddToProduct() {
 
@@ -26,7 +27,7 @@ function AddToProduct() {
         e.preventDefault();
   
 
-    axios.post('https://strapi2022.herokuapp.com/products', {
+    axios.post(`${server}products`, {
         name: formValues.name,
         description: formValues.description,
         price: formValues.price
@@ -41,7 +42,7 @@ function AddToProduct() {
 
         data.append("field", "image") 
 
-        axios.post("https://strapi2022.herokuapp.com/upload", data)
+        axios.post(`${server}upload`, data)
             .then((image) => console.log(image))
             .catch((error) => console.log(error))
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Product from './Product';
 import axios from "axios";
 import './Product.css';
+import server from "../config"
 
 
 function ProductList() {
@@ -13,7 +14,7 @@ function ProductList() {
         //console.log("from useEffect" , loadPage)
 
         const fetchProducts= async()=>{
-        const response = await axios.get(`https://strapi2022.herokuapp.com/products?_limit=${loadPage}`)
+        const response = await axios.get(`${server}products?_limit=${loadPage}`)
 
             console.log(response)
             setProducts(response.data) 

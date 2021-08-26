@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Checkout from './CheckoutCard'
+import server from "../config"
 
 
 function MyBooking() {
@@ -16,7 +17,7 @@ function MyBooking() {
 
         const fetchData = async () => {
             const res = await axios.get
-                (`https://strapi2022.herokuapp.com/user-bookings?users_permissions_permission.id=${userId}`
+                (`${server}user-bookings?users_permissions_permission.id=${userId}`
                     , {
                         headers: {
                             Authorization: `Bearer ${token}`,

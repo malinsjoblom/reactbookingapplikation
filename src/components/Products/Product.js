@@ -3,6 +3,7 @@ import './Product.css';
 import Modal from 'react-modal';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import server from "../config"
 
 
 
@@ -62,7 +63,7 @@ function Product({ productName, price, description, image, appointment }) {
 
         try {
 
-            const response = await axios.post('https://strapi2022.herokuapp.com/user-bookings', {
+            const response = await axios.post(`${server}/user-bookings`, {
                 name: username,
                 timeToAppointment: formValues.timeToAppointment,
                 mobile: Number(formValues.mobile),

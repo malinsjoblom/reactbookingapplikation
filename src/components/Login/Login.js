@@ -36,7 +36,7 @@ function Login() {
         e.preventDefault(); 
 
         axios
-        .post('https://nail-bar.herokuapp.com/auth/local', {
+        .post(`${server}auth/local`, {
             identifier: formValues.email,
             password: formValues.password,
         })
@@ -101,13 +101,13 @@ function Login() {
 
                             {/* <!--  Another Auth Routes -->*/}
                             <div className="sm:flex sm:flex-wrap mt-8 sm:mb-4 text-sm text-center">
-                                {<a href="https://nail-bar.herokuapp.com/ForgotPassword" className="flex-2 underline">
+                                {<a href="https://strapi2022.herokuapp.com//ForgotPassword" className="flex-2 underline">
                                     Forgot password? </a> }
 
                                 <p className="flex-1 text-gray-500 text-md mx-4 my-1 sm:my-auto">
                                     or </p>
 
-                                <a href="https://nail-bar.herokuapp.com/Register" className="flex-2 underline">
+                                <a href="https://strapi2022.herokuapp.com/Register" className="flex-2 underline">
                                     Create an Account </a>
                             </div>
                         </form>

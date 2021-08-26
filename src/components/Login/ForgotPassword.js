@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import server from "../config";
 
 
 function ForgotPassword() {
 
     function resetRequest() {
         axios
-            .post('https://strapi2022.herokuapp.com/auth/forgot-password', {
+            .post(`${server}auth/forgot-password`, {
                 email: 'malin.sjoblom@medieinstitutet.se', // user's email
             })
             .then(response => {
@@ -31,7 +32,7 @@ function ForgotPassword() {
         e.preventDefault();
 
         axios
-        .post('https://strapi2022.herokuapp.com/auth/local', {
+        .post(`${server}auth/local`, {
             identifier: formValues.email,
         })
         .then(response => {

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import server from "../config"
 
 function UploadFile() {
     const [fileData , setFileData] = useState();
@@ -19,7 +20,7 @@ function UploadFile() {
         data.append("files", fileData)
 
    
-        const res = axios.post('https://strapi2022.herokuapp.com/upload', data)
+        const res = axios.post(`${server}/upload`, data)
         console.log(res)
     }
 
